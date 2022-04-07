@@ -58,8 +58,6 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log("form submitted");
-
       if (this.updatedTask !== null) {
         this.tasks[this.updatedTask].title = this.title;
         this.tasks[this.updatedTask].description = this.description;
@@ -70,7 +68,6 @@ export default {
           description: this.description,
           isDone: this.isDone,
         });
-        console.log("this task data", this.tasks);
       }
 
       (this.title = ""), (this.description = "");
